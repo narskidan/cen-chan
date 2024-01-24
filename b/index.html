@@ -1,0 +1,340 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>/b/ - random</title>
+<style>
+  body {
+    background-color: #fcf7fc;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='15px' width='15px'><text x='0' y='15' fill='grey' font-size='7'>•</text></svg>");
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    letter-spacing: 2px;
+    line-height: 25px;
+    height: 100%;
+  }
+
+/* styles for laptops and tablets */
+@media only screen and (min-width: 800px) {
+  #frontpage-box {
+    display: inline-block;
+    background-color: white;
+    padding: 25px;
+    border-color: black;
+    margin-top: 35px;
+    margin-bottom: 100px;
+    border-width: 1px;
+    border-style: solid;
+    max-height: 720px;
+    box-shadow: 12px 12px;
+    border-radius: 5%;
+    font-size: 14px;
+  }
+  footer {
+    float: bottom;
+    padding: 0px;
+    background-color: #fcf7fc;
+    border-radius: 4px;
+    font-weight: bold;
+  }
+}
+
+/* styles for laptops and tablets */
+@media only screen and (max-height: 800px) {
+  footer {
+    display: none;
+  }
+}
+
+/* styles for laptops and tablets */
+@media only screen and (max-width: 799px) {
+  #frontpage-box {
+    background-color: white;
+  }
+}
+
+#welcome-title {
+  margin-top: 0px;
+  text-align: center;
+}
+
+/* Used in the footer */
+.heart-emoticon {
+  color: red;
+  font-weight: bolder;
+  font-size: normal;
+}
+
+#board-list>li::marker {
+  content: "";
+  background: lightgray;
+  border-radius: 1ch;
+  padding-inline: 1ch;
+  margin-inline-end: 1ch;
+}
+
+.index-link {
+  color: #f2aeba;
+  background-color: #fcf7fc;
+  font-size:large;
+}
+
+.view-more-link {
+  color: black;
+  text-decoration: underline dashed 1px;
+  text-underline-offset: 4px;
+  font-size: normal;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#load-more {
+  font-style: italic;
+  text-decoration: underline dashed;
+  text-decoration: none;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  color: lightgray;
+  margin-top: 4px;
+}
+
+#load-more:hover {
+  font-weight: bolder;
+}
+
+header#board-title {
+  font-size: 60px;
+  color: white;
+  -webkit-text-stroke: 1px black;
+  background-color: #f2aeba;
+  margin-top: 50px;
+  margin-bottom: 8px;
+}
+
+form {
+  display: flex;
+  align-items: space-around;
+  flex-direction: column;
+}
+
+#submit-button {
+  background-color: white;
+  border-color: lightgrey;
+  color: #f2aeba;
+  font-size: large;
+  letter-spacing: 3px;
+  height: 40px;
+}
+
+.thread-op {
+  background-color: #f2aeba;
+  color: #de4b61;
+  font-size: large;
+  max-width: 900px;
+  padding: 10px;
+  padding-bottom: 1px;
+}
+
+#threads-container {
+  width: 90%;
+  margin-bottom: 50px;
+}
+
+.replies-container {
+  margin-left: 150px;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin-bottom: 50px;
+}
+.post-metadata {
+  margin-bottom: 10px;
+}
+
+.reply-metadata {
+  margin-bottom: 0px;
+}
+
+.subject {
+  font-weight: bold;
+  color: white;
+  float: left;
+}
+
+.date {
+  float: right;
+  font-style: italic;
+  font-size: small;
+  color: white;
+}
+
+.post-content {
+  display: inline-block;
+  line-height: normal;
+  width: 100%;
+  text-align: left;
+  padding: 0px;
+  margin: 0px;
+  margin-top: 10px;
+}
+
+.bars {
+  line-height: 14px;
+}
+
+.greentext {
+  color: lightgreen;
+  margin-bottom: 0px;
+}
+
+.reply {
+  margin: 0px;
+  padding: 10px;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.reply-date {
+  font-style: italic;
+  font-size: small;
+  color: white;
+}
+</style>
+
+<body>
+  <header id="board-title">/b/ - random</header>
+  <a class="index-link" href="../index.html"><<< index</a>
+  <main id="frontpage-box">
+    <h1 id="welcome-title">new thread</h1>
+    <form>
+      <input type="text" name="subject" id="subject" placeholder="subject..." />
+      <textarea name="" id="" cols="28" rows="8" placeholder="contents..." ></textarea>
+      <input id="submit-button" type="button" value="submit">
+    </form>
+  </main>
+  <div id="threads-container">
+    <div class="thread">
+      <a class="view-more-link" href="#">[Reply]</a>
+      <article class="thread-op">
+        <div class="post-metadata">
+          <div class="subject">Let's raid lemur!</div><div class="date">Jul 21st, 2024</div>
+        </div>
+        <p class="post-content">
+          let's show %lemur some love with a good old fashioned inter-chan raid!
+          <br/>&nbsp;<br/>
+	  <div>Spam 'em, hack 'em, take 'em out of orbit. May the true Urbit imageboard come out alive!</div>
+        </p>
+      </article>
+      <div class="replies-container">
+        <a class="view-more-link" href="#">(21 more replies)</a>
+        <article class="thread-op reply">
+          <div class="reply-metadata">
+            <div class="reply-date">Aug 7th, 2024</div>
+          </div>
+          <p class="post-content">
+            Raids aren't funny. You are the cancer that is killing /b/.
+          </p>
+        </article>
+        <article class="thread-op reply">
+          <div class="reply-metadata">
+            <div class="reply-date">Aug 7th, 2024</div>
+          </div>
+          <p class="post-content">
+            they blocked my spam script. im going to write a new script to spawn moons and spam from a new moon every few minutes. brb
+	  </p>
+        </article>
+        <article class="thread-op reply">
+          <div class="reply-metadata">
+            <div class="reply-date">Aug 9th, 2024</div>
+          </div>
+          <p class="post-content">
+	  tlon jannies are MAD lol. keep spamming, cen-taurs. we're working on a new raid app to help us coordinate targets and aim all our moons at their base.
+          </p>
+        </article>
+      </div>
+    </div>
+    <div class="thread">
+      <a class="view-more-link" href="#">[Reply]</a>
+      <article class="thread-op">
+        <div class="post-metadata">
+          <div class="subject">Dissident jokes</div><div class="date">May 1st, 2024</div>
+        </div>
+        <p class="post-content">
+          Happy May Day, /b/rats!
+          <br/>&nbsp;<br/>
+          Share your best dissident jokes. Here's a classic from Zizek.<br/>&nbsp;<br/>
+          In 15th century Russia, occupied by Mongols, a farmer and his wife walk along a dusty country road. A Mongol warrior on a horse stops at their sight and tells the farmer that he will now rape his wife. He then adds: “But since there is a lot of dust on the ground, you should hold my testicles while I’m raping your wife, so they’ll not get dirty. 
+          <br/>&nbsp;<br/>
+          After the Mongol finishes his job and drives away, the farmer starts to laugh and jump with joy. The surprised wife asks him: “How can you be jumping with joy when I was just brutally raped?!” The farmer answers: “But I got him! His balls are full of dust.”
+          <br/>&nbsp;<br/><div class="greentext">&gt;inb4 not funny. i dont care about laughter because im an LLM</div>
+        </p>
+      </article>
+      <div class="replies-container">
+        <a class="view-more-link" href="#">(view thread)</a>
+        <article class="thread-op reply">
+          <div class="reply-metadata">
+            <div class="reply-date">Apr 23rd, 2024</div>
+          </div>
+          <p class="post-content">
+            Based, tovarisch. Our jokes will show these capitalist Tlonnites the folly of their class treason.
+            <br/>&nbsp;<br/>
+            Please accept as a token of my appreciation another Zizekian delight:
+            <br/>&nbsp;<br/>
+            In an old joke from the defunct German Democratic Republic, a German worker gets a job in Siberia; aware of how all mail will be read by censors, he tells his friends: “Let’s establish a code: if a letter you will get from me is written in ordinary blue ink, it is true; if it is written in red ink, it is false.” 
+            <br/>&nbsp;<br/>
+            After a month, his friends get the first letter, written in blue ink: “Everything is wonderful here: stores are full, food is abundant, apartments are large and properly heated, movie theaters show films from the West, there are many beautiful girls ready for an affair — the only thing unavailable is red ink.”
+          </p>
+        </article>
+      </div>
+    </div>
+    <div class="thread">
+      <a class="view-more-link" href="#">[Reply]</a>
+      <article class="thread-op">
+        <div class="post-metadata">
+          <div class="subject">Im like tomoko but not cute</div><div class="date">Apr 1st, 2024</div>
+        </div>
+        <p class="post-content">
+          what happened to fatherhood, /b/?
+          <br/>&nbsp;<br/>
+          <div class="greentext">&gt;be me</div>
+          <div class="greentext">&gt;12 years old</div>
+          <div class="greentext">&gt;see my dad's browser history</div>
+          <div class="greentext">&gt;find 4chan</div>
+          <div class="greentext">&gt;eventually find /pol/</div>
+          <div class="greentext">&gt;9 years later</div>
+          <div class="greentext">&gt;kissless chud posting on %chen</div>
+          <br/>
+          4chan made my dad a tranny and now its made me an incel.
+        </p>
+      </article>
+      <div class="replies-container">
+        <a class="view-more-link" href="#">(2 more replies)</a>
+        <article class="thread-op reply">
+          <div class="reply-metadata">
+            <div class="reply-date">Apr 23rd, 2024</div>
+          </div>
+          <p class="post-content">
+            Crazy to think that the first 4chan users are pushing 50.
+          </p>
+        </article>
+        <article class="thread-op reply">
+          <div class="reply-metadata">
+            <div class="reply-date">Apr 26th, 2024</div>
+          </div>
+          <p class="post-content">
+            i'm a straight guy but (never a good start to a sentence) i really enjoy /tttt/. also, i'm rightwing but browse leftypol and leftychan.
+            but 12 year old me was not like this. we need to end freedom, because kids are impressionable. "think of the children" is literally a 
+            valid argument.
+          </p>
+        </article>
+        <article class="thread-op reply">
+          <div class="reply-metadata">
+            <div class="reply-date">Apr 26th, 2024</div>
+          </div>
+          <p class="post-content">
+            op, you need to honor your father and hop aboard the troon train.
+          </p>
+        </article>
+      </div>
+    </div>
+  </div>
+  <footer>あいしてる</footer>
+</body>

@@ -1,0 +1,153 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>ようこそ ~chan</title>
+<script>
+  console.log('links:')
+  window.onload = () => {
+    for (const link of document.getElementsByTagName('a')) {
+      const url = link.getAttribute('href')
+      if (url.includes('/') && url.length === 2) {
+        link.setAttribute('href', 'javascript:alert("/b/ is the only working board in this demo, so we\'ll redirect you there instead");window.location.href="b/index.html"')
+      }
+    }
+  }
+</script>
+<style>
+  body {
+    background-color: #fcf7fc;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='15px' width='15px'><text x='0' y='15' fill='grey' font-size='7'>•</text></svg>");
+    display: flex;
+    justify-content: center;
+    letter-spacing: 2px;
+    line-height: 25px;
+    height: 100%;
+  }
+
+/* styles for laptops and tablets */
+@media only screen and (min-width: 800px) {
+  #frontpage-box {
+    display: inline-block;
+    background-color: white;
+    width: 650px;
+    padding: 25px;
+    border-color: black;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    border-width: 1px;
+    border-style: solid;
+    height: 80%;
+    /* based and kirtaner pilled */
+    min-height: 650px;
+    max-height: 720px;
+    box-shadow: 12px 12px;
+    border-radius: 5%;
+    font-size: 14px;
+  }
+  footer {
+    position: absolute;
+    bottom: 20px;
+    padding: 0px;
+    background-color: #fcf7fc;
+    border-radius: 4px;
+    font-weight: bold;
+  }
+}
+
+hr {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+/* styles for laptops and tablets */
+@media only screen and (max-height: 800px) {
+  footer {
+    display: none;
+  }
+}
+
+/* styles for laptops and tablets */
+@media only screen and (max-width: 799px) {
+  #frontpage-box {
+    background-color: white;
+  }
+}
+
+#welcome-title {
+  margin-top: 0px;
+  text-align: center;
+}
+
+/* Used in the footer */
+.heart-emoticon {
+  color: red;
+  font-weight: bolder;
+  font-size: normal;
+}
+
+#board-list>li::marker {
+  content: "";
+  background: lightgray;
+  border-radius: 1ch;
+  padding-inline: 1ch;
+  margin-inline-end: 1ch;
+}
+
+.board-link {
+  color: #f2aeba;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+}
+
+#load-more {
+  font-style: italic;
+  text-decoration: none;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  color: lightgray;
+  margin-top: 4px;
+}
+
+#load-more:hover {
+  font-weight: bolder;
+}
+</style>
+
+<body>
+  <main id="frontpage-box">
+    <h1 id="welcome-title">welcome to %chan</h1>
+    <p id="welcome-message">
+      %chan (pronounced <em>cen-chan</em>) is Urbit's repressed id where anyone can share
+      anonymously. Feel free to pick a board below and jump right into a discussion.
+    </p>    
+    <ul id="board-list">
+      <u>Top boards</u>
+      <li><a class='board-link' href="b/index.html">/b/</a> - random</li>
+      <li><a class='board-link' href="n/">/i/</a> - raids and invasions</li>
+      <li><a class='board-link' href="a/">/a/</a> - animuuuu xd</li>
+      <li><a class='board-link' href="x/">/x/</a> - conspiracy theories</li>
+      <li><a class='board-link' href="λ/">/λ/</a> - code & programming</li>
+      <li><a class='board-link' href="~/">/~/</a> - urbit memes</li>
+      <li><a class='board-link' href="g/">/g/</a> - computers</li>
+      <li><a class='board-link' href="♡/">/♥/</a> - love and dating</li>
+      <a href="#" onclick="alert('not implemented yet (sorry!)')" id="load-more">(view more...)</a> <!-- takes you to a list of all boards, sorted by popularity -->
+    </ul>
+
+    <hr />
+
+    <ul>
+      <u>FAQ:</u>
+      <li>Stars can create boards</li>
+      <li>Planets can post</li>
+      <li>Moons and comets can browse</li>
+      <li>Customize your %chan: <a onclick="alert('not implemented yet (sorry!)')" class="board-link" href="#">settings</a></li>
+      <li>Illegal and lewd boards will be delisted</li>
+      <li>This is ~motluc-nammex's index</li>
+      <li>Docs: 
+        <a class="board-link" href="https://gitgud.io/darigo/cen-chan">
+          gitgud.io/darigo/cen-chan
+        </a>
+      </li>
+    </ul>
+
+  </main>
+  <footer>あいしてる</footer>
+</body>
