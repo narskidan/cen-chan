@@ -1,4 +1,4 @@
-name: Deploy to Server
+name: Deploy to Server via SCP
 
 on:
   push:
@@ -13,14 +13,14 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
+      - name: Set up SSH key
+        run: echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa && chmod 600 ~/.ssh/id_rsa
+
+      - name: Copy files to server
+        uses: appleboy/scp-action@master
         with:
-          node-version: '14'
-
-      - name: Install FTP Deploy
-        run: npm install -g ftp-deploy
-
-      - name: Deploy to Server
-        run: |
-          ftp-deploy --user ${{ secrets.FTP_USER }} --password ${{ secrets.FTP_PASSWORD }} --host ${{ secrets.FTP_HOST }} --local-dir . --remote-dir /path/to/remote/directory
+          host: 24.144.93.173
+          username: root
+          key: ~/.ssh/id_rsa  # Use key-based authentication
+          source: "."  # Local directory to copy
+          target: "/var/www/html"  # Remote directory on the server
